@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Spell Checker Test</title>
+	<link rel="stylesheet" type="text/css" href="../libs/markitup/images/style.css">
+	<!-- markItUp! skin -->
+	<link rel="stylesheet" type="text/css" href="../libs/markitup/markitup/skins/markitup/style.css">
+	<!--  markItUp! toolbar skin -->
+	<link rel="stylesheet" type="text/css" href="../libs/markitup/markitup/sets/default/style.css">
+	<!-- jQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+	<!-- markItUp! -->
+	<script type="text/javascript" src="../libs/markitup/markitup/jquery.markitup.js"></script>
+	<!-- markItUp! toolbar settings -->
+	<script type="text/javascript" src="../libs/markitup/markitup/sets/default/set.js"></script>
+</head>
+<body>
+<h1><a href="#" class="check-spell">Javascript Spell Checker</a></h1>
+<p>Click <a href="#" class="check-spell">Check Spell</a> or above image to run spell checking.</p>
+    <textarea id="markItUp" cols="80" rows="20">
+&lt;h1&gt;Welcome to javascript spell checker!&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Spell Checker&lt;/strong&gt; is a JavaScript spell checking tool built with jQuery, AngularJS and markitup editor.
+         It allows you to check spell in text nodes english canadian dictionary.
+         Numbers and special symbols are considered to have spelling error for now.
+         The dictionary only contains English words.&lt;/p&gt;
+</textarea>
+
+<script type="text/javascript">
+$(function() {
+	// Add markItUp! to your textarea in one line
+	// $('textarea').markItUp( { Settings }, { OptionalExtraSettings } );
+	$('#markItUp').markItUp(mySettings);
+
+	// You can add content from anywhere in your page
+	// $.markItUp( { Settings } );	
+	$('.check-spell').click(function() {
+	    $('a[title="Preview"]').trigger('mouseup');
+	});
+});
+</script>
+</body>
+</html>
