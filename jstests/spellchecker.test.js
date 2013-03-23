@@ -1,16 +1,13 @@
-﻿describe("Dict constructor test", function () {
-    var dict;
+﻿describe("spellChecker test", function () {
+    var spellChecker,
+        dictionary;
 
     beforeEach(function () {
-        dict = new Dict();
-    });
-    
-    it("Dict constructor should not have linkage to __proto__", function () {
-        expect(dict.has("__proto__")).toBe(false);
+        spellChecker = new SpellChecker(dict);
     });
     
     it("Dict get and set test", function () {
-        dict.set("key1", "value1");
+        spellChecker.check("key1", "value1");
         dict.set("key2", "value2");
         dict.set("key3", "value3");
         expect(dict.get("key1")).toBe("value1");
