@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ToDo app test</title>
+    <link rel="shortcut icon" type="image/png" href="lib/jasmine/jasmine_favicon.png">
+    <link rel="stylesheet" type="text/css" href="lib/jasmine/jasmine.css">
+    <script type="text/javascript" src="lib/jasmine/jasmine.js"></script>
+    <script type="text/javascript" src="lib/jasmine/jasmine-html.js"></script>
+    <!--    source file-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
+    <script src="lib/angular/angular-scenario.js"></script>
+    <script type="text/javascript" src="../apps/todo.js"></script>
+<!--    spec file-->
+    <script type="text/javascript" src="../jstests/todo.test.js"></script>
+    <script type="text/javascript" src="lib/jasmine-standalone/spec/SpecHelper.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.updateInterval = 1000;
+
+            var htmlReporter = new jasmine.HtmlReporter();
+
+            jasmineEnv.addReporter(htmlReporter);
+
+            jasmineEnv.specFilter = function (spec) {
+                return htmlReporter.specFilter(spec);
+            };
+
+            var currentWindowOnload = window.onload;
+
+            window.onload = function () {
+                if (currentWindowOnload) {
+                    currentWindowOnload();
+                }
+                execJasmine();
+            };
+
+            function execJasmine() {
+                jasmineEnv.execute();
+            }
+
+        })();
+        </script>
+</head>
+<body>
+</body>
+</html>

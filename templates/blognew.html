@@ -1,0 +1,25 @@
+<form>
+    <div>
+        <h3>Entry Name:</h3>
+        <input ng-model="currentEntry.Name"/>
+    </div>
+    <div>
+        <h3>Entry Title:</h3>
+        <input ng-model="currentEntry.Title"/>
+    </div>
+    <div>
+        <h3>Meta Description:</h3>
+        <textarea ng-model="currentEntry.MetaDescription"></textarea>
+    </div>
+    <div>
+        <h3>Summary:</h3>
+        <textarea ng-model="currentEntry.Summary"></textarea>
+    </div>
+    <div>
+        <h3>Body:</h3>
+        <textarea ng-model="currentEntry.Body"></textarea>
+    </div>
+    <div>
+        <button ng-click="save()" class="btn-large">Save</button>
+    </div> 
+</form>

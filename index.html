@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="myBlog">
+<head>
+  <meta charset="utf-8">
+  <title>Jeff Jin's Personal Website</title>
+	<link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+  <ul class="menu">
+    <li><a href="#/bloglist">Blogs</a></li>
+    <li><a href="#/projectlist">Projects</a></li>
+    <li><a href="#/albumlist">Albums</a></li>
+    <li><a href="#/manage">Admin</a></li>
+    <li><a href="#/logout">Logout</a></li>
+  </ul>
+
+  <div ng-view></div>
+  <br/>
+  <br/>
+  <div>Jeff Jin's Personal Website: v<span app-version></span></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+  -->
+  <script src="libs/angular/angular.js"></script>
+  <script src="apps/app.js"></script>
+  <script src="apps/services.js"></script>
+  <script src="apps/controllers.js"></script>
+  <script src="apps/filters.js"></script>
+  <script src="apps/directives.js"></script>
+</body>
+</html>
