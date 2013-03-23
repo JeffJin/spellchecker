@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spellchecker", "spellchecker.csproj", "{C5C24C0C-7F3E-42AA-AF80-1961667700A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clients", "..\clients\clients.csproj", "{95E692DB-51AB-4C07-87CB-D4873B9E123C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5C24C0C-7F3E-42AA-AF80-1961667700A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5C24C0C-7F3E-42AA-AF80-1961667700A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5C24C0C-7F3E-42AA-AF80-1961667700A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5C24C0C-7F3E-42AA-AF80-1961667700A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95E692DB-51AB-4C07-87CB-D4873B9E123C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95E692DB-51AB-4C07-87CB-D4873B9E123C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95E692DB-51AB-4C07-87CB-D4873B9E123C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95E692DB-51AB-4C07-87CB-D4873B9E123C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

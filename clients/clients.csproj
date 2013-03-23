@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{95E692DB-51AB-4C07-87CB-D4873B9E123C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>clients</RootNamespace>
+    <AssemblyName>clients</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apps\app.js" />
+    <Content Include="apps\controllers.js" />
+    <Content Include="apps\directives.js" />
+    <Content Include="apps\en_ca.js" />
+    <Content Include="apps\en_us.js" />
+    <Content Include="apps\filters.js" />
+    <Content Include="apps\services.js" />
+    <Content Include="config\jstd-scenario-adapter-config.js" />
+    <Content Include="css\app.css" />
+    <Content Include="css\bootstrap-responsive.css" />
+    <Content Include="css\bootstrap-responsive.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\images\glyphicons-halflings-white.png" />
+    <Content Include="css\images\glyphicons-halflings.png" />
+    <Content Include="index.html" />
+    <Content Include="jstests\e2e\runner.html" />
+    <Content Include="jstests\e2e\scenarios.js" />
+    <Content Include="jstests\expression.test.html" />
+    <Content Include="jstests\expression.test.js" />
+    <Content Include="jstests\form.customcontrol.test.html" />
+    <Content Include="jstests\form.customvalidation.test.html" />
+    <Content Include="jstests\form.test.html" />
+    <Content Include="jstests\form.test.js" />
+    <Content Include="jstests\lib\angular\angular-mocks.js" />
+    <Content Include="jstests\lib\angular\angular-scenario.js" />
+    <Content Include="jstests\lib\angular\jstd-scenario-adapter.js" />
+    <Content Include="jstests\lib\angular\version.txt" />
+    <Content Include="jstests\lib\cilib\AntiXssLibrary.dll" />
+    <Content Include="jstests\lib\cilib\chetTimes.png" />
+    <Content Include="jstests\lib\cilib\chutzpah.dll" />
+    <Content Include="jstests\lib\cilib\Chutzpah.VS.Common.dll" />
+    <Content Include="jstests\lib\cilib\Chutzpah.VS2012.dll" />
+    <Content Include="jstests\lib\cilib\Chutzpah.VS2012.pkgdef" />
+    <Content Include="jstests\lib\cilib\Chutzpah.VS2012.TestAdapter.dll" />
+    <Content Include="jstests\lib\cilib\extension.vsixmanifest" />
+    <Content Include="jstests\lib\cilib\jasmine-html.js" />
+    <Content Include="jstests\lib\cilib\jasmine.css" />
+    <Content Include="jstests\lib\cilib\jasmine.html" />
+    <Content Include="jstests\lib\cilib\jasmine.js" />
+    <Content Include="jstests\lib\cilib\jasmine_favicon.png" />
+    <Content Include="jstests\lib\cilib\JSRunners\chutzpahRunner.js" />
+    <Content Include="jstests\lib\cilib\JSRunners\jasmineRunner.js" />
+    <Content Include="jstests\lib\cilib\JSRunners\qunitRunner.js" />
+    <Content Include="jstests\lib\cilib\Microsoft.VisualStudio.Settings.dll" />
+    <Content Include="jstests\lib\cilib\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll" />
+    <Content Include="jstests\lib\cilib\phantomjs.exe" />
+    <Content Include="jstests\lib\cilib\qunit.css" />
+    <Content Include="jstests\lib\cilib\qunit.html" />
+    <Content Include="jstests\lib\cilib\qunit.js" />
+    <Content Include="jstests\lib\cilib\SassAndCoffee.Core.dll" />
+    <Content Include="jstests\lib\cilib\SassAndCoffee.JavaScript.dll" />
+    <Content Include="jstests\lib\cilib\ServiceStack.Text.dll" />
+    <Content Include="jstests\lib\cilib\StructureMap.dll" />
+    <Content Include="jstests\lib\cilib\TestFiles\Jasmine\jasmine-html.js" />
+    <Content Include="jstests\lib\cilib\TestFiles\Jasmine\jasmine.css" />
+    <Content Include="jstests\lib\cilib\TestFiles\Jasmine\jasmine.html" />
+    <Content Include="jstests\lib\cilib\TestFiles\Jasmine\jasmine.js" />
+    <Content Include="jstests\lib\cilib\TestFiles\Jasmine\jasmine_favicon.png" />
+    <Content Include="jstests\lib\cilib\TestFiles\QUnit\qunit.css" />
+    <Content Include="jstests\lib\cilib\TestFiles\QUnit\qunit.html" />
+    <Content Include="jstests\lib\cilib\TestFiles\QUnit\qunit.js" />
+    <Content Include="jstests\lib\jasmine-jstd-adapter\JasmineAdapter.js" />
+    <Content Include="jstests\lib\jasmine-jstd-adapter\version.txt" />
+    <Content Include="jstests\lib\jasmine-standalone\SpecRunner.html" />
+    <Content Include="jstests\lib\jasmine-standalone\spec\PlayerSpec.js" />
+    <Content Include="jstests\lib\jasmine-standalone\spec\SpecHelper.js" />
+    <Content Include="jstests\lib\jasmine-standalone\src\Player.js" />
+    <Content Include="jstests\lib\jasmine-standalone\src\Song.js" />
+    <Content Include="jstests\lib\jasmine\index.js" />
+    <Content Include="jstests\lib\jasmine\jasmine-html.js" />
+    <Content Include="jstests\lib\jasmine\jasmine.css" />
+    <Content Include="jstests\lib\jasmine\jasmine.js" />
+    <Content Include="jstests\lib\jasmine\jasmine_favicon.png" />
+    <Content Include="jstests\lib\jasmine\version.txt" />
+    <Content Include="jstests\lib\jstestdriver\JsTestDriver.jar" />
+    <Content Include="jstests\lib\jstestdriver\version.txt" />
+    <Content Include="jstests\lib\qunit\qunit-composite.css" />
+    <Content Include="jstests\lib\qunit\qunit-composite.js" />
+    <Content Include="jstests\lib\qunit\qunit.css" />
+    <Content Include="jstests\lib\qunit\qunit.js" />
+    <Content Include="jstests\spellchecker.test.html" />
+    <Content Include="jstests\spellchecker.test.js" />
+    <Content Include="jstests\todo.test.html" />
+    <Content Include="jstests\todo.test.js" />
+    <Content Include="jstests\unit\controllersSpec.js" />
+    <Content Include="jstests\unit\filtersSpec.js" />
+    <Content Include="jstests\unit\servicesSpec.js" />
+    <Content Include="jstests\unit\widgetsSpec.js" />
+    <Content Include="libs\angular\angular-bootstrap-prettify.js" />
+    <Content Include="libs\angular\angular-bootstrap-prettify.min.js" />
+    <Content Include="libs\angular\angular-bootstrap.js" />
+    <Content Include="libs\angular\angular-bootstrap.min.js" />
+    <Content Include="libs\angular\angular-cookies.js" />
+    <Content Include="libs\angular\angular-cookies.min.js" />
+    <Content Include="libs\angular\angular-ie-compat.js" />
+    <Content Include="libs\angular\angular-loader.js" />
+    <Content Include="libs\angular\angular-loader.min.js" />
+    <Content Include="libs\angular\angular-mocks.js" />
+    <Content Include="libs\angular\angular-resource.js" />
+    <Content Include="libs\angular\angular-resource.min.js" />
+    <Content Include="libs\angular\angular-sanitize.js" />
+    <Content Include="libs\angular\angular-sanitize.min.js" />
+    <Content Include="libs\angular\angular-scenario.js" />
+    <Content Include="libs\angular\angular.js" />
+    <Content Include="libs\angular\angular.min.js" />
+    <Content Include="libs\angular\i18n\angular-locale_am-et.js" />
+    <Content Include="libs\angular\i18n\angular-locale_am.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ar-eg.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ar.js" />
+    <Content Include="libs\angular\i18n\angular-locale_bg-bg.js" />
+    <Content Include="libs\angular\i18n\angular-locale_bg.js" />
+    <Content Include="libs\angular\i18n\angular-locale_bn-bd.js" />
+    <Content Include="libs\angular\i18n\angular-locale_bn.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ca-es.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ca.js" />
+    <Content Include="libs\angular\i18n\angular-locale_cs-cz.js" />
+    <Content Include="libs\angular\i18n\angular-locale_cs.js" />
+    <Content Include="libs\angular\i18n\angular-locale_da-dk.js" />
+    <Content Include="libs\angular\i18n\angular-locale_da.js" />
+    <Content Include="libs\angular\i18n\angular-locale_de-at.js" />
+    <Content Include="libs\angular\i18n\angular-locale_de-be.js" />
+    <Content Include="libs\angular\i18n\angular-locale_de-ch.js" />
+    <Content Include="libs\angular\i18n\angular-locale_de-de.js" />
+    <Content Include="libs\angular\i18n\angular-locale_de-lu.js" />
+    <Content Include="libs\angular\i18n\angular-locale_de.js" />
+    <Content Include="libs\angular\i18n\angular-locale_el-gr.js" />
+    <Content Include="libs\angular\i18n\angular-locale_el-polyton.js" />
+    <Content Include="libs\angular\i18n\angular-locale_el.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-as.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-au.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-dsrt-us.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-dsrt.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-gb.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-gu.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-ie.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-in.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-iso.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-mh.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-mp.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-sg.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-um.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-us.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-vi.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-za.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en-zz.js" />
+    <Content Include="libs\angular\i18n\angular-locale_en.js" />
+    <Content Include="libs\angular\i18n\angular-locale_es-es.js" />
+    <Content Include="libs\angular\i18n\angular-locale_es.js" />
+    <Content Include="libs\angular\i18n\angular-locale_et-ee.js" />
+    <Content Include="libs\angular\i18n\angular-locale_et.js" />
+    <Content Include="libs\angular\i18n\angular-locale_eu-es.js" />
+    <Content Include="libs\angular\i18n\angular-locale_eu.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fa-ir.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fa.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fi-fi.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fi.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fil-ph.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fil.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fr-bl.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fr-ca.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fr-fr.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fr-gp.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fr-mc.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fr-mf.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fr-mq.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fr-re.js" />
+    <Content Include="libs\angular\i18n\angular-locale_fr.js" />
+    <Content Include="libs\angular\i18n\angular-locale_gl-es.js" />
+    <Content Include="libs\angular\i18n\angular-locale_gl.js" />
+    <Content Include="libs\angular\i18n\angular-locale_gsw-ch.js" />
+    <Content Include="libs\angular\i18n\angular-locale_gsw.js" />
+    <Content Include="libs\angular\i18n\angular-locale_gu-in.js" />
+    <Content Include="libs\angular\i18n\angular-locale_gu.js" />
+    <Content Include="libs\angular\i18n\angular-locale_he-il.js" />
+    <Content Include="libs\angular\i18n\angular-locale_he.js" />
+    <Content Include="libs\angular\i18n\angular-locale_hi-in.js" />
+    <Content Include="libs\angular\i18n\angular-locale_hi.js" />
+    <Content Include="libs\angular\i18n\angular-locale_hr-hr.js" />
+    <Content Include="libs\angular\i18n\angular-locale_hr.js" />
+    <Content Include="libs\angular\i18n\angular-locale_hu-hu.js" />
+    <Content Include="libs\angular\i18n\angular-locale_hu.js" />
+    <Content Include="libs\angular\i18n\angular-locale_id-id.js" />
+    <Content Include="libs\angular\i18n\angular-locale_id.js" />
+    <Content Include="libs\angular\i18n\angular-locale_in.js" />
+    <Content Include="libs\angular\i18n\angular-locale_is-is.js" />
+    <Content Include="libs\angular\i18n\angular-locale_is.js" />
+    <Content Include="libs\angular\i18n\angular-locale_it-it.js" />
+    <Content Include="libs\angular\i18n\angular-locale_it.js" />
+    <Content Include="libs\angular\i18n\angular-locale_iw.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ja-jp.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ja.js" />
+    <Content Include="libs\angular\i18n\angular-locale_kn-in.js" />
+    <Content Include="libs\angular\i18n\angular-locale_kn.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ko-kr.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ko.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ln-cd.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ln.js" />
+    <Content Include="libs\angular\i18n\angular-locale_lt-lt.js" />
+    <Content Include="libs\angular\i18n\angular-locale_lt.js" />
+    <Content Include="libs\angular\i18n\angular-locale_lv-lv.js" />
+    <Content Include="libs\angular\i18n\angular-locale_lv.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ml-in.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ml.js" />
+    <Content Include="libs\angular\i18n\angular-locale_mo.js" />
+    <Content Include="libs\angular\i18n\angular-locale_mr-in.js" />
+    <Content Include="libs\angular\i18n\angular-locale_mr.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ms-my.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ms.js" />
+    <Content Include="libs\angular\i18n\angular-locale_mt-mt.js" />
+    <Content Include="libs\angular\i18n\angular-locale_mt.js" />
+    <Content Include="libs\angular\i18n\angular-locale_nl-nl.js" />
+    <Content Include="libs\angular\i18n\angular-locale_nl.js" />
+    <Content Include="libs\angular\i18n\angular-locale_no.js" />
+    <Content Include="libs\angular\i18n\angular-locale_or-in.js" />
+    <Content Include="libs\angular\i18n\angular-locale_or.js" />
+    <Content Include="libs\angular\i18n\angular-locale_pl-pl.js" />
+    <Content Include="libs\angular\i18n\angular-locale_pl.js" />
+    <Content Include="libs\angular\i18n\angular-locale_pt-br.js" />
+    <Content Include="libs\angular\i18n\angular-locale_pt-pt.js" />
+    <Content Include="libs\angular\i18n\angular-locale_pt.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ro-ro.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ro.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ru-ru.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ru.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sk-sk.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sk.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sl-si.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sl.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sq-al.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sq.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sr-cyrl-rs.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sr-latn-rs.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sr-rs.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sr.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sv-se.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sv.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sw-tz.js" />
+    <Content Include="libs\angular\i18n\angular-locale_sw.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ta-in.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ta.js" />
+    <Content Include="libs\angular\i18n\angular-locale_te-in.js" />
+    <Content Include="libs\angular\i18n\angular-locale_te.js" />
+    <Content Include="libs\angular\i18n\angular-locale_th-th.js" />
+    <Content Include="libs\angular\i18n\angular-locale_th.js" />
+    <Content Include="libs\angular\i18n\angular-locale_tl-ph.js" />
+    <Content Include="libs\angular\i18n\angular-locale_tl.js" />
+    <Content Include="libs\angular\i18n\angular-locale_tr-tr.js" />
+    <Content Include="libs\angular\i18n\angular-locale_tr.js" />
+    <Content Include="libs\angular\i18n\angular-locale_uk-ua.js" />
+    <Content Include="libs\angular\i18n\angular-locale_uk.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ur-pk.js" />
+    <Content Include="libs\angular\i18n\angular-locale_ur.js" />
+    <Content Include="libs\angular\i18n\angular-locale_vi-vn.js" />
+    <Content Include="libs\angular\i18n\angular-locale_vi.js" />
+    <Content Include="libs\angular\i18n\angular-locale_zh-cn.js" />
+    <Content Include="libs\angular\i18n\angular-locale_zh-hans-cn.js" />
+    <Content Include="libs\angular\i18n\angular-locale_zh-hans.js" />
+    <Content Include="libs\angular\i18n\angular-locale_zh-hk.js" />
+    <Content Include="libs\angular\i18n\angular-locale_zh-tw.js" />
+    <Content Include="libs\angular\i18n\angular-locale_zh.js" />
+    <Content Include="libs\bootstrap\bootstrap.js" />
+    <Content Include="libs\bootstrap\bootstrap.min.js" />
+    <Content Include="libs\console\console-min.js" />
+    <Content Include="libs\console\console.js" />
+    <None Include="libs\jquery\jquery-1.9.1.intellisense.js" />
+    <Content Include="libs\jquery\jquery.js" />
+    <Content Include="libs\jquery\jquery.min.js" />
+    <Content Include="libs\modernizr-2.0.6.min.js" />
+    <Content Include="libs\underscore\underscore-min.js" />
+    <Content Include="libs\underscore\underscore.js" />
+    <Content Include="templates\results.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\jsTestDriver-scenario.conf" />
+    <Content Include="config\jsTestDriver.conf" />
+    <Content Include="jstests\lib\jasmine\MIT.LICENSE" />
+    <Content Include="libs\bootstrap\.DS_Store" />
+    <Content Include="libs\jquery\jquery-1.9.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1272</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1268/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
