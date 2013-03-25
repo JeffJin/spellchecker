@@ -1,30 +1,57 @@
 <!doctype html>
 <html lang="en" ng-app="spellChecker">
-<head>
-  <meta charset="utf-8">
-  <title>Jeff Jin's Personal Website</title>
-	<link rel="stylesheet" href="css/bootstrap.css" />
-  <link rel="stylesheet" href="css/app.css"/>
-</head>
-<body>
-  <ul class="menu">
-    <li><a href="#/">Spell Checker</a></li>
-    <li><a href="#/dictionary">Dictionary</a></li>
-  </ul>
-
-  <div ng-view></div>
-  <br/>
-  <br/>
-  <div>Jeff Jin's Spell Checker</div>
-
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
-  -->
-  <script src="libs/angular/angular.js"></script>
-  <script src="apps/app.js"></script>
-  <script src="apps/services.js"></script>
-  <script src="apps/controllers.js"></script>
-  <script src="apps/filters.js"></script>
-  <script src="apps/directives.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Spell Checker Test</title>
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/app.css"/>
+        <link rel="stylesheet" type="text/css" href="libs/markitup/images/style.css">
+        <!-- markItUp! skin -->
+        <link rel="stylesheet" type="text/css" href="libs/markitup/markitup/skins/markitup/style.css">
+        <!--  markItUp! toolbar skin -->
+        <link rel="stylesheet" type="text/css" href="libs/markitup/markitup/sets/default/style.css">
+        <!-- jQuery -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+        <!-- markItUp! -->
+        <script type="text/javascript" src="libs/markitup/markitup/jquery.markitup.js"></script>
+        <!-- markItUp! toolbar settings -->
+        <script type="text/javascript" src="libs/markitup/markitup/sets/default/set.js"></script>
+    </head>
+    <body>
+        <div ng-controller="SpellCheckerCtrl">
+            <h1><a href="#" ng-click="checkSpell()" class="check-spell">Javascript Spell Checker</a></h1>
+            <p>Click <a href="#" ng-click="checkSpell()" class="check-spell">Check Spell</a> or above image to run spell checking.</p>
+            <textarea id="markItUp" cols="80" rows="20">
+&lt;div&gt;
+       &lt;h1&gt;Walcome to javascript spell-checker!&lt;/h1&gt;
+       &lt;div&gt;
+           &lt;p&gt;&lt;strong&gt;Spell-Checker&lt;/strong&gt; is a JavaScript spell checking tool built with jQuery, AngularJS and markitup editor.
+                             It allows you to check spelling in text nodes against English Canadien dictionary.
+                             Nambers and special symbols are considered to have spelling error for now.
+                             The dictionary only contains English words.
+           &lt;/p&gt;
+       &lt;/div&gt;   
+&lt;/div&gt;            
+</textarea>
+            <div id="invalidWords" style="position: absolute;left:800px;top:100px">
+                <h2>Invalid words</h2>
+                <ul>
+                    <li ng-repeat="word in invalidWords">
+                        <span>{{word}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- In production use:
+            <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+            -->
+        <script type="text/javascript" src="libs/underscore/underscore-min.js"></script>
+        <script type="text/javascript" src="apps/spellchecker.js"></script>
+        <script src="libs/angular/angular.js"></script>
+        <script src="apps/app.js"></script>
+        <script src="apps/services.js"></script>
+        <script src="apps/controllers.js"></script>
+        <script src="apps/filters.js"></script>
+        <script src="apps/directives.js"></script>
+    </body>
 </html>

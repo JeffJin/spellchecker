@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Reflection;
 using System.Web.Http;
 
 namespace spellchecker.Controllers
@@ -12,7 +14,14 @@ namespace spellchecker.Controllers
         // GET api/Dict
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            using (Stream stream = Assembly.GetExecutingAssembly()
+                               .GetManifestResourceStream("spellchecker.App_Data." + "en_ca.dic"))
+            using (var reader = new StreamReader(stream))
+            {
+                string result = reader.ReadToEnd();
+                return result.Split(new [] { "\r\n" },
+                            StringSplitOptions.RemoveEmptyEntries);
+            }
         }
 
         // GET api/Dict/word

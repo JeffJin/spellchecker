@@ -2,7 +2,6 @@ var SpellChecker = function (dict) {
     var self = this;
     var _dict = dict;
     self.invalidWords = [];
-    self.correctedWords = [];
 
     self.checkSpelling = function (node, correct) {
         var whitespace = /^\s+|\s+$|\r\n|\n|\r/g;
@@ -15,6 +14,8 @@ var SpellChecker = function (dict) {
                 var words = text.split(' ');
                 
                 _.each(words, function (word) {
+                    //escape some symbols
+                    word = word.replace(/^\[^\w\s]|[^\w\s]$/gi, '');
                     if (_.contains(_dict, word)) {
                         //valid spelling
                         console.log("... The word '" + word + "' has no spelling error");

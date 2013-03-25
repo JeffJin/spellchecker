@@ -321,7 +321,7 @@
     <Content Include="libs\jquery\jquery.js" />
     <Content Include="libs\jquery\jquery.min.js" />
     <Content Include="libs\markitup\images\body.png" />
-    <Content Include="libs\markitup\images\jaysalvat.png" />
+    <Content Include="libs\markitup\images\jeffjin.png" />
     <Content Include="libs\markitup\images\markitup.png" />
     <Content Include="libs\markitup\images\style.css" />
     <Content Include="libs\markitup\index.html" />

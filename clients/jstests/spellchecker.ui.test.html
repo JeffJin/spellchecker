@@ -15,10 +15,10 @@
 	<!-- markItUp! toolbar settings -->
 	<script type="text/javascript" src="../libs/markitup/markitup/sets/default/set.js"></script>
 </head>
-<body>
-<h1><a href="#" class="check-spell">Javascript Spell Checker</a></h1>
-<p>Click <a href="#" class="check-spell">Check Spell</a> or above image to run spell checking.</p>
-    <textarea id="markItUp" cols="80" rows="20">
+    <body>
+        <h1><a href="#" class="check-spell">Javascript Spell Checker</a></h1>
+        <p>Click <a href="#" class="check-spell">Check Spell</a> or above image to run spell checking.</p>
+        <textarea id="markItUp" cols="80" rows="20">
 &lt;h1&gt;Welcome to javascript spell checker!&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;Spell Checker&lt;/strong&gt; is a JavaScript spell checking tool built with jQuery, AngularJS and markitup editor.
@@ -26,19 +26,30 @@
          Numbers and special symbols are considered to have spelling error for now.
          The dictionary only contains English words.&lt;/p&gt;
 </textarea>
+        <script type="text/javascript" src="../libs/underscore/underscore-min.js"></script>
+        <script type="text/javascript" src="../apps/spellchecker.js"></script>
 
-<script type="text/javascript">
-$(function() {
-	// Add markItUp! to your textarea in one line
-	// $('textarea').markItUp( { Settings }, { OptionalExtraSettings } );
-	$('#markItUp').markItUp(mySettings);
+        <script type="text/javascript">
+            $(function() {
+                // Add markItUp! to your textarea in one line
+                // $('textarea').markItUp( { Settings }, { OptionalExtraSettings } );
+                $('#markItUp').markItUp(mySettings);
+                $('a[title="Preview"]').trigger('mouseup');
 
-	// You can add content from anywhere in your page
-	// $.markItUp( { Settings } );	
-	$('.check-spell').click(function() {
-	    $('a[title="Preview"]').trigger('mouseup');
-	});
-});
-</script>
-</body>
+                // You can add content from anywhere in your page
+                // $.markItUp( { Settings } );	
+                $('.check-spell').click(function () {
+                    $('a[title="Preview"]').trigger('mouseup');
+
+                    var iframeDocument = $('.markItUpPreviewFrame')[0].contentDocument
+                        || $('.markItUpPreviewFrame')[0].contentWindow.document;
+                    var dictionary = ['apple', 'pear', 'banana', 'pie'],
+                        spellChecker = new SpellChecker(dictionary),
+                        startNode = iframeDocument.body;
+                    spellChecker.parseNode(startNode, false);
+                    console.log(spellChecker.invalidWords.length);
+                });
+            });
+        </script>
+    </body>
 </html>
